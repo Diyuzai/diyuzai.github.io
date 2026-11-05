@@ -879,7 +879,8 @@ int main() {
 <tr><td>2</td><td>EOF 后再读</td><td>全部失败。先 <code>cin.clear()</code></td></tr>
 <tr><td>3</td><td><code>getline</code> 与 <code>&gt;&gt;</code> 混用时忘了处理残留</td><td>顺序错位、少读一行。统一读法最省心</td></tr>
 <tr><td>4</td><td><code>cin &gt;&gt; s</code> 读带空格句子</td><td>只拿到第一个单词。改用 <code>getline</code></td></tr>
-<tr><td>5</td><td><code>getline</code> 在 Windows 下残留 <code>\r</code></td><td>字符串末尾多一个 <code>\r</code>，比较/长度都错。可 <code>if (!s.empty() &amp;&amp; s.back()=='') s.pop_back();</code></td></tr>
+<tr><td>5</td><td><code>getline</code> 在 Windows 下残留 <code>\r</code></td><td>字符串末尾多一个 <code>\r</code>，比较/长度都错。可 <code>if (!s.empty() &amp;&amp; s.back()=='
+') s.pop_back();</code></td></tr>
 <tr><td>6</td><td>用 <code>scanf("%s")</code> 读长串</td><td>缓冲区溢出。改 <code>%99s</code> 限长或直接用 <code>string</code></td></tr>
 <tr><td>7</td><td>文件打开失败没检查</td><td>后面全在读写空流。<code>if (!fout) { /* 报错 */ }</code></td></tr>
 </tbody>
